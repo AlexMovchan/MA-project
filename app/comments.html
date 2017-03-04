@@ -1,0 +1,14 @@
+<div ng-controller='commentsCtrl'>
+	<div class="postsHolder">
+    <div class='placeholderPosts' ng-repeat='sms in message'>
+        {{sms.name}}
+        <i class="fa fa-heart" aria-hidden="true" ng-class='sms.like ? "red" : "blue"' ng-click='changeLike()'></i>
+    </div>
+	</div>
+
+	<div class="post">
+	    <h2>Write a post here</h2>
+	    <p><textarea ng-model='text'></textarea></p>
+	    <button ng-click='print()'>Submit</button>
+	</div>
+</div>
