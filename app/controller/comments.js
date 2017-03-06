@@ -1,12 +1,16 @@
+angular.module('myApp')
 .controller('commentsCtrl', function($scope){
                 $scope.text = '';
                 $scope.message = [];
+                $scope.date = [];
 
                 $scope.liked = false;
                 $scope.url = 'wall.html';
                 $scope.print = function() {
-                    $scope.message.push({name: $scope.text, like: false});
+
+                    $scope.message.push({author: $scope.author, name: $scope.text, like: false, date : new Date()});
                     $scope.text = '';
+                    $scope.author ='';
                 }
                 $scope.changeLike = function() {
                     this.sms.like = true;

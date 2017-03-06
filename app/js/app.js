@@ -4,7 +4,7 @@
       $locationProvider.html5Mode(true);
 
       $routeProvider.when("/home", {
-          templateUrl: "/index.html"
+          templateUrl: "/home.html"
       });
 
       $routeProvider.when("/comments", {

@@ -3,20 +3,86 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans+Condensed:300" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
+
 	<base href="/"/>
 	<script src='js/angular.js'></script>
-	<script src='js/angular_route.js'></script>
-	<script src='js/app.js'></script>
 </head>
 
+
 <body ng-controller='defaultCtrl'>
-	<a href="home">Home</a>
-
+	<!-- <a href="home">Home</a>
 	<a href="comments">Coments</a>
+	<div ng-view></div> -->
+	<header>
+		<div class='wrapper'>
+			<div class="header_container">	
+				<div class='logo'>
+					<img src="img/logo.png" alt="logo">
+				</div>
+				<div class='contacts'>
+					<h2 class='titleMiddle'>Need help? Contact Us!</h2>
+					<h3 class='mainColor'><i class="fa fa-envelope fa-2x headerIcon" aria-hidden="true"></i> Email: olexandr.movchan@gmail.com</h3>
+					<h3 class='mainColor'><i class="fa fa-mobile fa-2x headerIcon" aria-hidden="true"></i> +380630201396</h3>
+				</div>
+			</div>
+		</div>
+	</header>
 
-<div ng-view></div>
+	<nav>
+		<div class="wrapper">
+			<ul class='navigation'>
+				<li><a href='##'>FEEDBACK</a></li>
+				<li><a href='##'>Our contacts</a></li>
+				<li><a href='##'>Providing</a></li>
+				<li><a href='##'>Comments</a></li>
+				<li><a href='##'>Contacts</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class='content'>
+		<div class="wrapper">
+			<div class="content_info">
+				<div class="content_info-text">
+					<h1 class='titleLarge'>Aerial solutions</h1>
+					<h1 class='titleLarge titleBold'>for the digital age</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem aliquam magnam illum atque, ex culpa dolorum, provident accusantium iure veritatis modi! Nisi voluptatum, eius corrupti quibusdam quidem, consequuntur quam delectus.</p>
+				</div>
+				<div class='mainColor titleMiddle'>
+					<i class="fa fa-check-square content_info-note" aria-hidden="true"> Local Engineers</i>
+					<i class="fa fa-check-square content_info-note" aria-hidden="true"> Same Day Services</i>
+					<i class="fa fa-check-square content_info-note" aria-hidden="true"> Free Estimates</i>
+					<i class="fa fa-check-square content_info-note" aria-hidden="true"> No Hidden Charges</i>
+				</div>
+			</div>
+		</div>
+	</div>
 
-		<script src='js/script.js'></script>
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src='js/angular_route.js'></script>
+	<script src='js/app.js'></script>
+	<script src='controller/comments.js'></script>
+	<script src='js/jquery-3.1.1.js'></script>
+	<script src='js/script.js'></script>
 </body>
 </html>

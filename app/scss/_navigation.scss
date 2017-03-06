@@ -1,0 +1,27 @@
+nav{
+	background-color: #2b3740;
+	margin: 20px 0 0 0;
+	display: none;
+	.navigation {
+		display: flex;
+		justify-content: flex-start;
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+			display: block;
+			transition: 1s;
+			&:hover {
+				background-color: #53626d;
+			}
+			a {
+				text-decoration: none;
+				color: white;
+				font-size: 25px;
+				height: inherit;
+				padding: 30px 20px;
+				display: block;
+			}
+		}
+	}
+}
