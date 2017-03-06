@@ -11,14 +11,23 @@
           templateUrl: "/comments.html"
       });
 
-      $routeProvider.when("/list", {
-          templateUrl: "/list.html"
+      $routeProvider.when("/abonents", {
+          templateUrl: "/abonents.html"
       });
 
       $routeProvider.otherwise({
           templateUrl: "/home.html"
       });
   })
- 	.controller("defaultCtrl", function ($scope) {
- 		$scope.text = ''
- 	})
+  .constant("baseUrl", "http://localhost:2403/my-comments/")
+  .controller('defaultCtrl', function($scope,$http, baseUrl){
+    $scope.message = [];
+    // $scope.refresh = function () {
+            $http.get(baseUrl).success(function (data) {
+                $scope.message = data;
+            });
+        // }
+     // $scope.refresh();
+  })
+
+
