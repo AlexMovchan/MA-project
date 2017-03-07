@@ -16,6 +16,14 @@
 			"required": false,
 			"id": "comment",
 			"order": 1
+		},
+		"like": {
+			"name": "like",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "like",
+			"order": 2
 		}
 	}
 }

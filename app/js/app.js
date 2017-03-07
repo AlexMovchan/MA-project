@@ -1,4 +1,4 @@
- angular.module('myApp', ['ngRoute'])
+ angular.module('myApp', ['ngRoute', 'ngResource'])
  	.config(function ($routeProvider, $locationProvider) {
 
       $locationProvider.html5Mode(true);
@@ -19,15 +19,6 @@
           templateUrl: "/home.html"
       });
   })
-  .constant("baseUrl", "http://localhost:2403/my-comments/")
-  .controller('defaultCtrl', function($scope,$http, baseUrl){
-    $scope.message = [];
-    // $scope.refresh = function () {
-            $http.get(baseUrl).success(function (data) {
-                $scope.message = data;
-            });
-        // }
-     // $scope.refresh();
-  })
+  
 
 

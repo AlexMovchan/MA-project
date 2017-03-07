@@ -23,7 +23,8 @@ header {
 nav {
   background-color: #2b3740;
   margin: 20px 0 0 0;
-  display: none; }
+  display: none;
+  border-bottom: 1px solid white; }
   nav .navigation {
     display: flex;
     justify-content: flex-start;
@@ -103,7 +104,17 @@ body {
 
 .post {
   text-align: center;
-  background: linear-gradient(to top, blue, white); }
+  background-color: #edeef0;
+  border-bottom: 1px solid #cecdcd; }
+  .post h2 {
+    color: black;
+    padding: 20px 0; }
+  .post input {
+    width: 300px; }
+  .post textarea {
+    width: 300px; }
+  .post button {
+    margin-bottom: 20px; }
 
 .red {
   color: red; }
