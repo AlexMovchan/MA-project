@@ -1,9 +1,9 @@
 <div  class='wall' ng-controller='commentsCtrl'>
 	<div class="post">
 	    <h2>What is new?</h2>
-	    <p><input type="text" placeholder="Input your NAME" ng-model='author' width='30%'></p>
-	    <p><textarea ng-model='text' width='30%'></textarea></p>
-	    <button ng-click='print()'>Submit</button>
+	    <p><input type="text" placeholder="Input your NAME" ng-model='item.author' width='30%'></p>
+	    <p><textarea ng-model='item.comment' width='30%'></textarea></p>
+	    <button ng-click='addComent(item)'>Submit</button>
 	</div>
 	<div class="postsHolder">
 		<div class='placeholderPosts' ng-repeat='item in message.data'>
