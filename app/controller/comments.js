@@ -10,32 +10,29 @@ angular.module('myApp')
 		        });
         	}
 
-            $scope.update = function (item) {
-                // HTTP PUT
-                // Отправка PUT запроса для обновления определенной записи на сервере
-                $http({
-                    url: baseUrl + item.id,
-                    method: "PUT",
-                    data: item
-                }).then(function (modifiedItem) {
-                    for (var i = 0; i < $scope.message.length; i++) {
-                        if ($scope.message[i].id == modifiedItem.id) {
-                            $scope.message[i] = modifiedItem;
-                            break;
-                        }
-                    }
-                    $scope.currentView = "table";
+
+
+            $scope.changeLike = function(item){
+                if(item.like) {
+                    item.like = false;
+                }else {
+                    item.like = true;
+                }
+                $http.put(baseUrl+item.id, item).then(function(item) {
+                    $scope.refresh();
                 });
             }
+
+
 
             $scope.addComent = function (item) {
                 $http.post(baseUrl, item).then(function (item) {
                     $scope.message.data.push(item);
+                    $scope.refresh();
                 });
-                $scope.update(item)
         	}
-           
 
-           
+
+
         	$scope.refresh();
 })

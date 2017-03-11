@@ -10,7 +10,7 @@
 		    <a href="##">{{item.date | date: 'MM/dd/yyyy HH:mm:ss'}}</a>
 		    <b>{{item.author}}</b>
 		    <span>{{item.comment}}</span>
-		    <i class="fa fa-heart" aria-hidden="true" ng-class='item.like ? "red" : "blue"' ng-click='changeLike()'></i>
+		    <i class="fa fa-heart" aria-hidden="true" ng-class='item.like ? "red" : "blue"' ng-click='changeLike(item)'></i>
 	    </div>
 	</div>
 
