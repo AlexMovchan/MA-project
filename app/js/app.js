@@ -4,19 +4,19 @@
       $locationProvider.html5Mode(true);
 
       $routeProvider.when("/home", {
-          templateUrl: "/home.html"
+          templateUrl: "/views/home.html"
       });
 
       $routeProvider.when("/comments", {
-          templateUrl: "/comments.html"
+          templateUrl: "/views/comments.html"
       });
 
       $routeProvider.when("/abonents", {
-          templateUrl: "/abonents.html"
+          templateUrl: "/views/abonents.html"
       });
 
       $routeProvider.otherwise({
-          templateUrl: "/home.html"
+          templateUrl: "/views/home.html"
       });
   })
   

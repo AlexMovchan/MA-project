@@ -10,6 +10,9 @@
 		justify-content: center;
 		&-text {
 			width: 40%;
+			p {
+				line-height: 25px;
+			}
 		}
 		&-note {
 			width: 45%;

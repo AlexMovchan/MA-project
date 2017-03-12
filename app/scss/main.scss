@@ -3,16 +3,41 @@
 @import 'header';
 @import 'navigation';
 @import 'content';
+@import 'presentation';
+@import 'btn';
+@import 'digital';
+@import 'providing';
+@import 'comentaries';
+@import 'footer';
 
 h1,h2,h3,h4,h6 {
 	margin :0;
 	font-weight: 100;
 }
 
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+hr{
+	margin: 0;
+}
+.fa {
+	padding: 0 10px;
+	font-size: 20px;
+	transition: all .6s;
+}
+img{
+	width: 100%;
+}
 body {
 	font-family: 'arial';
 	font-weight: 100;
 	margin: 0;
+	color: #1e2a32;
 }
 .placeholderPosts {
 	width:30%;

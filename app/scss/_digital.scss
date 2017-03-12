@@ -1,0 +1,22 @@
+.digital{
+	background-image: url(../img/bg1.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	box-shadow: inset 0px 570px 1px rgba(43, 55, 64, 0.87);
+	height: 570px;
+	&__container{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;
+		height: inherit;
+		&_column {
+			width: 50%;
+			color: white;
+			p {
+				line-height: 25px;
+			}
+		}
+	}
+}

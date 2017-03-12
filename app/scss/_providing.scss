@@ -1,0 +1,31 @@
+.providing {
+	margin: 50px 0;
+	h1 {
+		margin: 30px 0;
+		font-size: 40px;
+	}
+	&__container{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		&-column {
+			width: 30%;
+			line-height: 60px;
+			li{
+				transition: all .6s;
+				font-size: 18px;
+				color: #d40808;
+				.fa {
+					color: #2b3740;
+				}
+			}
+			li:hover{
+				background-color: #d40808;
+				color: white;
+			}
+			li:hover .fa{
+				color: white;
+			}
+		}
+	}
+}

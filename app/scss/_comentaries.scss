@@ -1,0 +1,41 @@
+.comentaries {
+	background-image: url(../img/bg2.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	box-shadow: inset 0px 400px 1px rgba(43, 55, 64, 0.87);
+	height: 400px;
+	&__container {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;
+		height: 350px;
+		h1{
+			width: 100%;
+			font-size: 40px;
+			color: white;
+		}
+		&-column {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 50%;
+			&--picture {
+				width: 80%;
+				overflow: hidden;
+				margin: 20px;
+				img {
+					border-radius: 50%;
+				}
+			}
+			&--text{
+				color: white;
+				line-height: 25px;
+				h2{
+					color: #d40808;
+				}
+			}
+		}
+	}
+}
