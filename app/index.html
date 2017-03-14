@@ -6,8 +6,9 @@
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans+Condensed:300" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<base href="https://alexmovchan.github.io/MA-project/app/"/>
+	<base href="/"/>
 
 </head>
 
@@ -17,7 +18,7 @@
 		<div class='wrapper'>
 			<div class="header_container">
 				<div class='logo'>
-					<img src="img/logo.png" alt="logo">
+					<a href="index.html"><img src="img/logo.png" alt="logo"></a>
 				</div>
 				<div class='contacts'>
 					<h2 class='titleMiddle'>Need help? Contact Us!</h2>
@@ -32,6 +33,7 @@
 	<nav>
 		<div class="wrapper">
 			<ul class='navigation'>
+				<i class="fa fa-bars fa-2x" id='burger' aria-hidden="true"></i>
 				<li><a href='index.html'>HOME</a></li>
 				<li><a href='abonents'>Our abonents</a></li>
 				<li><a href='##'>Providing</a></li>
@@ -44,51 +46,7 @@
 
     <div ng-view></div> 
 
-	<div class='content'>
-		<div class="wrapper">
-			<div class="content_info">
-				<div class="content_info-text">
-					<h1 class='titleLarge'>Aerial solutions</h1>
-					<h1 class='titleLarge titleBold'>for the digital age</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem aliquam magnam illum atque, ex culpa dolorum, provident accusantium iure veritatis modi! Nisi voluptatum, eius corrupti quibusdam quidem, consequuntur quam delectus.</p>
-				</div>
-				<div class='mainColor titleMiddle'>
-					<i class="fa fa-check-square content_info-note" aria-hidden="true"> Local Engineers</i>
-					<i class="fa fa-check-square content_info-note" aria-hidden="true"> Same Day Services</i>
-					<i class="fa fa-check-square content_info-note" aria-hidden="true"> Free Estimates</i>
-					<i class="fa fa-check-square content_info-note" aria-hidden="true"> No Hidden Charges</i>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="presentation">
-		<div class="wrapper">
-			<div class="presentation__pictures">
-				<div class="presentation__pictures-image">
-					<img src="img/pic1.jpg" alt=""><button class='btn btn-flex'><a href="##">TV Areals</a></button>
-				</div>
-				<div class="presentation__pictures-image">
-					<img src="img/pic2.jpg" alt=""><button class='btn btn-flex'><a href="##">TV Wall Mounting</a></button>
-				</div>
-				<div class="presentation__pictures-image">
-					<img src="img/pic3.jpg" alt=""><button class='btn btn-flex'><a href="##">HD TV</a></button>
-				</div>
-				<div class="presentation__pictures-image">
-					<img src="img/pic4.jpg" alt=""><button class='btn btn-flex'><a href="##">Service & Repairs</a></button>
-				</div>
-			</div>
-			<h1>Welcome to our company!</h1>
-			<div class="presentation__text">
-				<div class="presentation__text-column">
-					<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				</div>
-				<div class="presentation__text-column">
-					<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 
 	<div class="digital">
 		<div class="wrapper">
@@ -123,7 +81,7 @@
 						<hr>
 						<li><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>Assumenda provident at.</li>
 						<hr>
-						<li><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>Distinctio doloremque explicabo.</li>
+						<li><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>Distinctio doloremque.</li>
 					</ul>
 				</div>
 				<div class="providing__container-column">
@@ -136,7 +94,7 @@
 						<hr>
 						<li><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>Assumenda provident at.</li>
 						<hr>
-						<li><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>Distinctio doloremque explicabo.</li>
+						<li><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>Distinctio doloremque.</li>
 					</ul>
 				</div>
 				<div class="providing__container-column">
@@ -149,7 +107,7 @@
 						<hr>
 						<li><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>Assumenda provident at.</li>
 						<hr>
-						<li><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>Distinctio doloremque explicabo.</li>
+						<li><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>Distinctio doloremque.</li>
 					</ul>
 				</div>
 			</div>
@@ -233,6 +191,8 @@
 	<script src='js/angular_route.js'></script>
 	<script src='js/app.js'></script>
 	<script src='controller/comments.js'></script>
+	<script src='controller/abonents.js'></script>
+
 
 	<script src='js/jquery-3.1.1.js'></script>
 	<script src='js/script.js'></script>

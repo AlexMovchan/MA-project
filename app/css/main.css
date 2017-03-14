@@ -2,6 +2,9 @@
   width: 960px;
   height: inherit;
   margin: auto; }
+  @media only screen and (max-width: 960px) {
+    .wrapper {
+      width: 100%; } }
 
 .titleMiddle {
   font-size: 28px; }
@@ -29,10 +32,17 @@ nav {
     justify-content: flex-start;
     margin: 0;
     padding: 0; }
+    @media only screen and (max-width: 560px) {
+      nav .navigation {
+        width: 50px;
+        display: block; } }
     nav .navigation li {
       list-style: none;
       display: block;
       transition: 1s; }
+      @media only screen and (max-width: 560px) {
+        nav .navigation li {
+          display: none; } }
       nav .navigation li:hover {
         background-color: #53626d; }
       nav .navigation li a {
@@ -41,7 +51,23 @@ nav {
         font-size: 25px;
         height: inherit;
         padding: 30px 20px;
-        display: block; }
+        display: block;
+        position: relative; }
+        @media only screen and (max-width: 768px) {
+          nav .navigation li a {
+            font-size: 18px; } }
+        nav .navigation li a:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 1px;
+          height: 3px;
+          background: #7AE2DE;
+          transition: all .2s ease-in-out;
+          transform: scaleX(0); }
+        nav .navigation li a:hover:after {
+          transform: scaleX(1); }
 
 .content {
   background-image: url(../img/banner.jpg);
@@ -53,23 +79,52 @@ nav {
     display: flex;
     flex-flow: column;
     justify-content: center; }
+    @media only screen and (max-width: 960px) {
+      .content_info {
+        flex-flow: row wrap;
+        align-items: center; } }
     .content_info-text {
       width: 40%; }
+      @media only screen and (max-width: 960px) {
+        .content_info-text {
+          width: 75%;
+          text-align: center; } }
       .content_info-text p {
         line-height: 25px; }
     .content_info-note {
       width: 45%;
       padding: 20px; }
+      @media only screen and (max-width: 768px) {
+        .content_info-note {
+          width: 100%; } }
+    @media only screen and (max-width: 960px) {
+      .content_info-faList {
+        width: 80%;
+        text-align: center; } }
+    @media only screen and (max-width: 768px) {
+      .content_info-faList {
+        width: 200px;
+        text-align: left; } }
 
 .presentation {
   margin: 30px 0; }
+  @media only screen and (max-width: 960px) {
+    .presentation h1 {
+      text-align: center; } }
   .presentation__pictures {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     margin: 30px 0; }
+    @media only screen and (max-width: 768px) {
+      .presentation__pictures {
+        justify-content: space-around; } }
     .presentation__pictures-image {
       width: 23%; }
+      @media only screen and (max-width: 768px) {
+        .presentation__pictures-image {
+          width: 42%;
+          padding: 10px; } }
       .presentation__pictures-image img {
         width: 100%; }
       .presentation__pictures-image a {
@@ -93,6 +148,12 @@ nav {
     .presentation__text-column {
       width: 49%;
       line-height: 25px; }
+      @media only screen and (max-width: 960px) {
+        .presentation__text-column {
+          width: 45%; } }
+      @media only screen and (max-width: 768px) {
+        .presentation__text-column {
+          width: 80%; } }
 
 .btn {
   background-color: #d40808;
@@ -104,6 +165,9 @@ nav {
     width: 100%;
     height: 50px;
     margin-top: -4px; }
+    @media only screen and (max-width: 960px) {
+      .btn-flex {
+        height: 60px; } }
     .btn-flex:hover {
       background-color: #2b3740; }
   .btn-primary {
@@ -115,23 +179,43 @@ nav {
     .btn-primary:hover {
       background-color: white;
       color: #d40808; }
+  .btn-form {
+    width: 150px;
+    height: 50px;
+    color: white;
+    border-radius: 5px;
+    font-size: 26px;
+    transition: all .5s; }
+    .btn-form:hover {
+      background-color: #3b9ce4;
+      color: #d40808; }
 
 .digital {
   background-image: url(../img/bg1.jpg);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  box-shadow: inset 0px 570px 1px rgba(43, 55, 64, 0.87);
-  height: 570px; }
+  box-shadow: inset 0px 1000px 1px rgba(43, 55, 64, 0.87); }
   .digital__container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     height: inherit; }
+    @media only screen and (max-width: 960px) {
+      .digital__container {
+        justify-content: space-around; } }
     .digital__container_column {
       width: 50%;
-      color: white; }
+      color: white;
+      margin: 30px 0; }
+      @media only screen and (max-width: 960px) {
+        .digital__container_column {
+          width: 45%; } }
+      @media only screen and (max-width: 768px) {
+        .digital__container_column {
+          width: 80%;
+          text-align: center; } }
       .digital__container_column p {
         line-height: 25px; }
 
@@ -150,7 +234,11 @@ nav {
       .providing__container-column li {
         transition: all .6s;
         font-size: 18px;
-        color: #d40808; }
+        color: #d40808;
+        cursor: pointer; }
+        @media only screen and (max-width: 960px) {
+          .providing__container-column li {
+            font-size: 14px; } }
         .providing__container-column li .fa {
           color: #2b3740; }
       .providing__container-column li:hover {
@@ -164,23 +252,34 @@ nav {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  box-shadow: inset 0px 400px 1px rgba(43, 55, 64, 0.87);
-  height: 400px; }
+  box-shadow: inset 0px 800px 1px rgba(43, 55, 64, 0.87);
+  padding: 30px 0; }
   .comentaries__container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: center;
-    height: 350px; }
+    align-items: center; }
+    @media only screen and (max-width: 960px) {
+      .comentaries__container {
+        justify-content: center; } }
     .comentaries__container h1 {
       width: 100%;
       font-size: 40px;
       color: white; }
+      @media only screen and (max-width: 960px) {
+        .comentaries__container h1 {
+          text-align: center; } }
     .comentaries__container-column {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 50%; }
+      @media only screen and (max-width: 960px) {
+        .comentaries__container-column {
+          width: 45%; } }
+      @media only screen and (max-width: 768px) {
+        .comentaries__container-column {
+          width: 80%; } }
       .comentaries__container-column--picture {
         width: 80%;
         overflow: hidden;
@@ -236,8 +335,39 @@ hr {
   font-size: 20px;
   transition: all .6s; }
 
+@media only screen and (max-width: 560px) {
+  ul:hover {
+    width: 100%;
+    display: block; } }
+
+@media only screen and (max-width: 560px) {
+  ul:hover li {
+    display: block;
+    text-align: center; }
+  ul:hover #burger {
+    width: 30px;
+    transform: rotateY(180deg);
+    transition: all 1s; } }
+
+#burger {
+  color: white;
+  font-size: 35px;
+  padding: 10px;
+  display: none; }
+  @media only screen and (max-width: 560px) {
+    #burger {
+      display: block; } }
+
 img {
   width: 100%; }
+
+table {
+  border: 1px solid black;
+  margin: 0 auto 10px; }
+
+td {
+  border: 1px solid black;
+  padding: 10px; }
 
 body {
   font-family: 'arial';
@@ -277,7 +407,8 @@ body {
     cursor: pointer; }
 
 .wall {
-  background-color: #edeef0; }
+  background-color: #edeef0;
+  padding-top: 30px; }
 
 .post {
   text-align: center;
@@ -285,7 +416,7 @@ body {
   border-bottom: 1px solid #cecdcd; }
   .post h2 {
     color: black;
-    padding: 20px 0; }
+    padding: 10px 0; }
   .post input {
     width: 300px; }
   .post textarea {
@@ -293,11 +424,11 @@ body {
   .post button {
     margin-bottom: 20px; }
 
-.red {
-  color: red; }
-
 .blue {
-  color: blue; }
+  color: #3b9ce4; }
+
+.dark {
+  color: #bdbdbd; }
 
 .mainColor {
   color: #d40808; }

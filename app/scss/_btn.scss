@@ -7,7 +7,10 @@
 	&-flex{
 		width: 100%;
 		height: 50px;
-	    margin-top: -4px;	
+	    margin-top: -4px;
+	    @include respond-to(tablets){
+			height: 60px;
+		}	
 	    &:hover{
 			background-color: #2b3740;
 	    }
@@ -20,6 +23,18 @@
 		transition: all .5s;
 		&:hover{
 			background-color: white;
+			color: #d40808;
+	    }
+	}
+	&-form {
+		width: 150px;
+		height: 50px;
+		color: white;
+		border-radius: 5px;
+		font-size: 26px;
+		transition: all .5s;
+		&:hover{
+			background-color: #3b9ce4;
 			color: #d40808;
 	    }
 	}

@@ -23,7 +23,13 @@ angular.module('myApp')
                 });
             }
 
+            $scope.deleteComent = function(item){
+                $http.delete(baseUrl+item.id, item).then(function (item) {
+                    $scope.message.data.splice($scope.message.data.indexOf(item), 1);
+                    $scope.refresh();
+                });
 
+            }
 
             $scope.addComent = function (item) {
                 $http.post(baseUrl, item).then(function (item) {

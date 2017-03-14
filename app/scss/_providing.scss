@@ -15,6 +15,10 @@
 				transition: all .6s;
 				font-size: 18px;
 				color: #d40808;
+				cursor: pointer;
+				@include respond-to(tablets){
+					font-size: 14px;
+				}
 				.fa {
 					color: #2b3740;
 				}

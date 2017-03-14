@@ -2,5 +2,7 @@
 	width: 960px;
 	height: inherit;
 	margin: auto;
-
+	@include respond-to(tablets){
+		width: 100%
+	}
 }

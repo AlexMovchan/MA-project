@@ -7,10 +7,17 @@ nav{
 		justify-content: flex-start;
 		margin: 0;
 		padding: 0;
+		@include respond-to(smallMobile){
+			width: 50px;
+			display: block;
+		}
 		li {
 			list-style: none;
 			display: block;
 			transition: 1s;
+			@include respond-to(smallMobile){
+				display: none;
+			}
 			&:hover {
 				background-color: #53626d;
 			}
@@ -21,6 +28,24 @@ nav{
 				height: inherit;
 				padding: 30px 20px;
 				display: block;
+				position: relative;
+				@include respond-to(mobile){
+					font-size: 18px;
+				}
+				&:after {
+				    content: '';
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 1px;
+					height: 3px;
+					background: #7AE2DE;
+					transition: all .2s ease-in-out;
+					transform: scaleX(0);
+				}
+				&:hover:after{
+					transform: scaleX(1);
+				}
 			}
 		}
 	}

@@ -1,0 +1,37 @@
+{
+	"type": "Collection",
+	"properties": {
+		"name": {
+			"name": "name",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "name",
+			"order": 0
+		},
+		"surname": {
+			"name": "surname",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "surname",
+			"order": 1
+		},
+		"location": {
+			"name": "location",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "location",
+			"order": 2
+		},
+		"phone": {
+			"name": "phone",
+			"type": "number",
+			"typeLabel": "number",
+			"required": true,
+			"id": "phone",
+			"order": 3
+		}
+	}
+}

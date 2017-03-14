@@ -1,12 +1,24 @@
 .presentation {
 	margin: 30px 0;
+	h1{
+		@include respond-to(tablets){
+			text-align: center;
+		}
+	}
 	&__pictures {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
 		margin: 30px 0;
+		@include respond-to(mobile){
+			justify-content: space-around;
+		}
 		&-image {
 			width: 23%;
+			@include respond-to(mobile){
+				width: 42%;
+				padding: 10px;
+			}
 			img {
 				width: 100%;
 			}
@@ -36,6 +48,12 @@
 		&-column{
 			width: 49%;
 			line-height: 25px;
+			@include respond-to(tablets){
+				width: 45%;
+			}
+			@include respond-to(mobile){
+				width: 80%;
+			}
 		}
 	}
 }

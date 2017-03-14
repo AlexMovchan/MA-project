@@ -8,8 +8,16 @@
 		display: flex;
 		flex-flow: column;
 		justify-content: center;
+		@include respond-to(tablets){
+			flex-flow: row wrap;
+			align-items: center;
+		}
 		&-text {
 			width: 40%;
+			@include respond-to(tablets){
+				width: 75%;
+				text-align: center;
+			}
 			p {
 				line-height: 25px;
 			}
@@ -17,6 +25,19 @@
 		&-note {
 			width: 45%;
 			padding: 20px;
+			@include respond-to(mobile){
+				width: 100%;
+			}
+		}
+		&-faList{
+			@include respond-to(tablets){
+				width: 80%;
+				text-align: center;
+			}
+			@include respond-to(mobile){
+				width: 200px;
+				text-align: left;
+			}
 		}
 	}
 }

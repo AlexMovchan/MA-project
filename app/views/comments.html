@@ -3,14 +3,14 @@
 	    <h2>What is new?</h2>
 	    <p><input type="text" placeholder="Input your NAME" ng-model='item.author' width='30%'></p>
 	    <p><textarea ng-model='item.comment' width='30%'></textarea></p>
-	    <button ng-click='addComent(item)'>Submit</button>
+	    <button ng-click='addComent(item)' class='btn btn-form'>Submit</button>
 	</div>
 	<div class="postsHolder">
 		<div class='placeholderPosts' ng-repeat='item in message.data'>
-		    <a href="##">{{item.date | date: 'MM/dd/yyyy HH:mm:ss'}}</a>
+		    <a href="##">{{item.date | date: 'MM/dd/yyyy HH:mm:ss'}}</a> 
 		    <b>{{item.author}}</b>
 		    <span>{{item.comment}}</span>
-		    <i class="fa fa-heart" aria-hidden="true" ng-class='item.like ? "red" : "blue"' ng-click='changeLike(item)'></i>
+		    <i class="fa fa-heart" aria-hidden="true" ng-class='item.like ? "blue" : "dark"' ng-click='changeLike(item)'></i>
 	    </div>
 	</div>
 
