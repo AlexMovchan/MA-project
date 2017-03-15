@@ -1,9 +1,11 @@
 <div  class='wall' ng-controller='commentsCtrl'>
 	<div class="post">
 	    <h2>What is new?</h2>
-	    <p><input type="text" placeholder="Input your NAME" ng-model='item.author' width='30%'></p>
-	    <p><textarea ng-model='item.comment' width='30%'></textarea></p>
-	    <button ng-click='addComent(item)' class='btn btn-form'>Submit</button>
+	    <form name="myForm1" novalidate ng-submit='addComent(item)'>
+		    <p><input type="text" placeholder="Input your NAME" required ng-model='item.author' width='30%'></p>
+		    <p><textarea required ng-model='item.comment' width='30%'></textarea></p>
+		    <button type='submit' class='btn btn-form' ng-class='myForm1.$invalid ? "disableBtn" : "enableBtn"' ng-disabled="myForm.$invalid">Submit</button>
+		</form>
 	</div>
 	<div class="postsHolder">
 		<div class='placeholderPosts' ng-repeat='item in message.data'>

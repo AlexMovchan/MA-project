@@ -5,7 +5,7 @@
 			"name": "name",
 			"type": "string",
 			"typeLabel": "string",
-			"required": true,
+			"required": false,
 			"id": "name",
 			"order": 0
 		},
@@ -13,23 +13,23 @@
 			"name": "surname",
 			"type": "string",
 			"typeLabel": "string",
-			"required": true,
+			"required": false,
 			"id": "surname",
 			"order": 1
 		},
-		"location": {
-			"name": "location",
+		"email": {
+			"name": "email",
 			"type": "string",
 			"typeLabel": "string",
-			"required": true,
-			"id": "location",
+			"required": false,
+			"id": "email",
 			"order": 2
 		},
 		"phone": {
 			"name": "phone",
 			"type": "number",
 			"typeLabel": "number",
-			"required": true,
+			"required": false,
 			"id": "phone",
 			"order": 3
 		}

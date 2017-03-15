@@ -5,6 +5,11 @@
             @content;   
         }
     }
+    @if $media==midMobile {
+        @media only screen and (max-width: 640px) {
+            @content;    
+        }
+    }
     @if $media==mobile {
         @media only screen and (max-width: 768px) {
             @content;    
