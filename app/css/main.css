@@ -1,3 +1,17 @@
+table {
+  border: 1px solid black;
+  margin: 0 auto 10px; }
+  @media only screen and (max-width: 560px) {
+    table {
+      font-size: 9px; } }
+
+td {
+  border: 1px solid black;
+  padding: 10px; }
+  @media only screen and (max-width: 560px) {
+    td {
+      padding: 0; } }
+
 .wrapper {
   width: 960px;
   height: inherit;
@@ -331,7 +345,7 @@ nav {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  box-shadow: inset 0px 800px 1px rgba(43, 55, 64, 0.87);
+  box-shadow: inset 0px 1200px 1px rgba(43, 55, 64, 0.87);
   padding: 30px 0; }
   .comentaries__container {
     display: flex;
@@ -359,12 +373,23 @@ nav {
       @media only screen and (max-width: 768px) {
         .comentaries__container-column {
           width: 80%; } }
+      @media only screen and (max-width: 560px) {
+        .comentaries__container-column {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center; } }
       .comentaries__container-column--picture {
         width: 80%;
         overflow: hidden;
-        margin: 20px; }
+        margin: 20px;
+        transition: all 1s; }
+        .comentaries__container-column--picture:hover {
+          transform: rotateY(180deg); }
         .comentaries__container-column--picture img {
           border-radius: 50%; }
+        @media only screen and (max-width: 560px) {
+          .comentaries__container-column--picture {
+            width: 65%; } }
       .comentaries__container-column--text {
         color: white;
         line-height: 25px; }
@@ -374,7 +399,7 @@ nav {
 .placeholderPosts {
   width: 40%;
   border: 1px solid #cecdcd;
-  padding: 20px;
+  padding: 25px;
   text-align: center;
   margin: 5px auto;
   background-color: white;
@@ -408,7 +433,7 @@ nav {
   .placeholderPosts i {
     position: absolute;
     bottom: 5px;
-    right: 5px;
+    right: 0px;
     cursor: pointer; }
 
 .wall {
@@ -433,8 +458,10 @@ nav {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: center;
   margin: 30px 0; }
+  @media only screen and (max-width: 768px) {
+    .information__container {
+      justify-content: space-around; } }
   .information__container hr {
     margin: 10px 0; }
   .information__container .socialIco {
@@ -446,12 +473,42 @@ nav {
     width: 33%;
     line-height: 35px; }
     .information__container-column h2 {
-      margin: 20px 0; }
+      margin: 20px 0;
+      text-align: center; }
     .information__container-column i {
       color: #d40808;
       width: 25px;
       text-align: center;
       font-size: 25px; }
+    .information__container-column .sateliteBg {
+      background-image: url(../img/pic7.jpg);
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 250px; }
+    @media only screen and (max-width: 960px) {
+      .information__container-column ul {
+        font-size: 15px; } }
+    @media only screen and (max-width: 768px) {
+      .information__container-column {
+        width: 90%;
+        text-align: center; }
+        .information__container-column ul {
+          font-size: 25px; }
+        .information__container-column h2 {
+          text-align: center;
+          font-size: 35px; } }
+    @media only screen and (max-width: 560px) {
+      .information__container-column {
+        width: 95%; }
+        .information__container-column ul {
+          font-size: 18px; } }
+  @media only screen and (max-width: 768px) {
+    .information__container .facebookLike {
+      display: none; } }
+  @media only screen and (max-width: 768px) {
+    .information__container .gMap {
+      width: 95%; } }
 
 h1, h2, h3, h4, h6 {
   margin: 0;
@@ -505,14 +562,6 @@ hr {
 
 img {
   width: 100%; }
-
-table {
-  border: 1px solid black;
-  margin: 0 auto 10px; }
-
-td {
-  border: 1px solid black;
-  padding: 10px; }
 
 body {
   font-family: 'arial';

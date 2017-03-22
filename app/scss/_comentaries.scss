@@ -3,7 +3,7 @@
 	background-position: center;
 	background-attachment: fixed;
 	background-size: cover;
-	box-shadow: inset 0px 800px 1px rgba(43, 55, 64, 0.87);
+	box-shadow: inset 0px 1200px 1px rgba(43, 55, 64, 0.87);
 	padding: 30px 0;
 	&__container {
 		display: flex;
@@ -32,12 +32,24 @@
 			@include respond-to(mobile){
 				width: 80%;
 			}
+			@include respond-to(smallMobile){
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: center;
+			}
 			&--picture {
 				width: 80%;
 				overflow: hidden;
 				margin: 20px;
+				transition: all 1s;
+				&:hover{
+					transform: rotateY(180deg);
+				}
 				img {
 					border-radius: 50%;
+				}
+				@include respond-to(smallMobile){
+					width: 65%;
 				}
 			}
 			&--text{
@@ -54,7 +66,7 @@
 .placeholderPosts {
 	width:40%;
 	border: 1px solid #cecdcd;
-	padding: 20px;
+	padding: 25px;
 	text-align: center;
 	margin: 5px auto;
 	background-color: white;
@@ -92,7 +104,7 @@
 	i {
 		position: absolute;
 		bottom: 5px;
-		right: 5px;
+		right: 0px;
 		cursor: pointer;
 	}
 }
